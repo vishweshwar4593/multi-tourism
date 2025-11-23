@@ -1,0 +1,170 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  margin: 0;
+  padding: 40px 20px;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.app-container {
+  background: #fff;
+  max-width: 700px;
+  width: 100%;
+  border-radius: 15px;
+  padding: 30px 40px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  color: #4a148c;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.tourism-agent form {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.tourism-agent input[type="text"] {
+  flex-grow: 1;
+  padding: 14px 18px;
+  font-size: 18px;
+  border-radius: 25px;
+  border: 2px solid #9b59b6;
+  box-shadow: 0 4px 8px rgba(155, 89, 182, 0.2);
+  transition: all 0.3s ease;
+}
+
+.tourism-agent input[type="text"]:focus {
+  border-color: #6a1b9a;
+  box-shadow: 0 0 8px #6a1b9a;
+  outline: none;
+}
+
+.tourism-agent button {
+  background: #8e44ad;
+  border: none;
+  padding: 14px 30px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(142, 68, 173, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tourism-agent button:hover:not(:disabled) {
+  background: #6a1b9a;
+  box-shadow: 0 8px 20px rgba(106, 27, 154, 0.6);
+}
+
+.tourism-agent button:disabled {
+  background: #c39bd3;
+  cursor: not-allowed;
+}
+
+.display-options {
+  margin-bottom: 25px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.display-options label {
+  cursor: pointer;
+  user-select: none;
+  padding: 10px 20px;
+  border: 2px solid #9b59b6;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  color: #7a1c90;
+  font-weight: 600;
+  display: flex;  
+  align-items: center;
+}
+
+.display-options input[type="radio"] {
+  margin-right: 8px;
+  cursor: pointer;
+  vertical-align: middle;
+  accent-color: #9b59b6;
+}
+
+.display-options input[type="radio"]:checked + label,
+.display-options label:hover {
+  background-color: #9b59b6;
+  color: #fff;
+  border-color: #7a1c90;
+  box-shadow: 0 6px 15px rgba(155, 89, 182, 0.7);
+}
+
+.result {
+  background: #f8f4fb;
+  border-radius: 15px;
+  padding: 20px 30px;
+  box-shadow: 0 6px 20px rgba(155, 89, 182, 0.4);
+  font-size: 18px;
+  color: #4b148c;
+  min-height: 120px;
+}
+
+.result p {
+  margin: 12px 0;
+}
+
+.result ul {
+  list-style: disc inside;
+  padding-left: 0;
+  margin: 12px 0 0;
+}
+
+.error {
+  background-color: #ffccd5;
+  color: #a7021a;
+  font-weight: 700;
+  margin: 20px 0;
+  padding: 12px 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(167, 2, 26, 0.3);
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  margin: 20px 0;
+  color: #512da8;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .tourism-agent form {
+    flex-direction: column;
+  }
+
+  .tourism-agent button {
+    width: 100%;
+  }
+
+  .display-options {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .display-options label {
+    justify-content: center;
+    width: 100%;
+  }
+}
