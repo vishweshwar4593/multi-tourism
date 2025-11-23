@@ -1,0 +1,1 @@
+exclude: ["node_modules", "multi-agent-tourism/node_modules"]
